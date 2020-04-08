@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hub-settings
+data:
+  hub.host : "selenium-svc"
+  hub.port : "4444"
