@@ -1,3 +1,4 @@
+# Hub with AKS node selector
 apiVersion: v1
 kind: Pod
 metadata:
