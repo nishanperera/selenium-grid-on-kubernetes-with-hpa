@@ -2,7 +2,7 @@
 
 Setting up a Selenium Grid with single Chrome node and auto scale number of nodes depend on node CPU usage.
 
-## Prerequisits 
+## Prerequisites 
 * Docker desktop with kubernetes
 * Enable Metrics Server for Kubernetes on Docker Desktop 
     https://blog.codewithdan.com/enabling-metrics-server-for-kubernetes-on-docker-desktop/
