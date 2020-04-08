@@ -8,31 +8,31 @@ Setting up a Selenium Grid with single Chrome node and auto scale number of node
     https://blog.codewithdan.com/enabling-metrics-server-for-kubernetes-on-docker-desktop/
 
 
-### Setup Selenium hub
+## Setup Selenium hub
 
 ```
 kubectl apply -f hub-deployment.yaml
 ```
 
-create service to access hun externally
+Create service to access Selenum hub externally
 
 ```
 kubectl apply -f hub-service.yaml
 ```
 
-Now you can access hub using following requests
+Access hub using following requests
 
 http://localhost:30001/wd/hub/status
 
 http://localhost:30001/grid/api/hub
 
-### Create Hub configurations
+## Create Hub configurations
 
 ```
 kubectl apply -f hub-config.yaml
 ```
 
-### Create Chrome node 
+## Create Chrome node 
 
 ```
 kubectl apply -f chrome-node-deployment.yaml
@@ -40,13 +40,16 @@ kubectl apply -f chrome-node-deployment.yaml
 
 To view the node http://localhost:30001/grid/console
 
-### Setup Pod Autoscaler
+## Setup Pod Autoscaler
 
 ```
 kubectl autoscale deployment chrome-node-rc --cpu-percent=40 --min=1 --max=5
 
 ```
 
+```
+kubectl get hpa -w
+````
 
 
 ### Get Resources
